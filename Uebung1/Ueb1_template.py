@@ -68,7 +68,7 @@ def main(use_sim=False, ip='localhost', port=2001):
 
             if robot["prox.ground.reflected"][0]>= 600 or robot["prox.ground.reflected"][1]>= 600:
                 state = "GO"
-            elif robot["prox.ground.reflected"][0]< 600 or robot["prox.ground.reflected"][1]< 600:
+            else:
                 state = "TurnL"
             
 
