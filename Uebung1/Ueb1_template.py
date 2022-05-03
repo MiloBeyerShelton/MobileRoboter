@@ -66,9 +66,9 @@ def main(use_sim=False, ip='localhost', port=2001):
            
             # TODO: Implementieren Sie hier das gewünschte Verhalten
 
-            if robot["prox.ground.reflected"]>= 600:
+            if robot["prox.ground.reflected"][0]>= 600 or robot["prox.ground.reflected"][1]>= 600:
                 state = "GO"
-            elif robot["prox.ground.reflected"]<= 600:
+            elif robot["prox.ground.reflected"][0]< 600 or robot["prox.ground.reflected"][1]< 600:
                 state = "TurnL"
             
 
@@ -78,7 +78,7 @@ def main(use_sim=False, ip='localhost', port=2001):
             elif state == "TurnL":
                 robot["motor.left.target"]=-reverse_speed
                 robot["motor.right.target"]=-reverse_speed
-                time.sleep(distance_to_seconds(reverse_len, reverse_speed)) #hopefully only this thread sleeps not the robor
+                time.sleep(distance_to_seconds(reverse_len, convert_speed(reverse_speed))) #hopefully only this thread sleeps not the robor
 
                 robot["motor.left.target"]=-turn_speed
                 robot["motor.right.target"]=turn_speed
@@ -104,5 +104,6 @@ if __name__ == '__main__':
     # Parse arguments and pass them to main function
     args = parser.parse_args()
     main(args.sim, args.ip, args.port)
+
 
 
