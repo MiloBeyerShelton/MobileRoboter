@@ -65,12 +65,21 @@ def main(use_sim=False, ip='localhost', port=2001):
         while True:
            
             # TODO: Implementieren Sie hier das gewünschte Verhalten
+            print(robot["prox.ground.reflected"][0])
 
-            if robot["prox.ground.reflected"][0]>= 600 or robot["prox.ground.reflected"][1]>= 600:
+
+            if robot["prox.ground.reflected"][0]>= 500 and robot["prox.ground.reflected"][1]>= 500:
                 state = "GO"
-            elif robot["prox.ground.reflected"][0]< 600 or robot["prox.ground.reflected"][1]< 600:
+            elif robot["prox.ground.reflected"][0]< 500 or robot["prox.ground.reflected"][1]< 500:
                 state = "TurnL"
             
+            if robot["button.center"] == 1 :
+                if state == "stop":
+                    state == "GO"
+                else:
+                    state = "stop"
+            
+      
 
             if state == "GO":
                 robot["motor.left.target"]=dirve_speed
@@ -83,7 +92,9 @@ def main(use_sim=False, ip='localhost', port=2001):
                 robot["motor.left.target"]=-turn_speed
                 robot["motor.right.target"]=turn_speed
                 time.sleep(degrees_to_seconds(turn_deg, convert_speed(turn_speed))) #hopefully only this thread sleeps not the robor
-
+            if state == "stop":
+                robot["motor.left.target"]=0
+                robot["motor.right.target"]=0
     except Exception as err:
         # Stop robot
         robot['motor.left.target'] = 0
