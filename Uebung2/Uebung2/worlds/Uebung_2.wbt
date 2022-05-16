@@ -1,0 +1,53 @@
+#VRML_SIM R2022a utf8
+WorldInfo {
+  basicTimeStep 10
+  contactProperties [
+    ContactProperties {
+      material2 "thymio body"
+      coulombFriction [
+        0.7
+      ]
+    }
+  ]
+}
+Viewpoint {
+  orientation 0.2643454129178422 0.6248354054963471 -0.7346442803884823 1.0449730630954301
+  position -1.4643443262782028 1.4748168105486463 1.5238444740166854
+}
+TexturedBackgroundLight {
+}
+CardboardBox {
+  translation -0.0763491 0.424175 0.1
+  rotation 0 0 1 0.261799
+  name "cardboard box 1"
+  size 0.2 0.2 0.2
+}
+CardboardBox {
+  translation 0.102941 -0.121705 0.1
+  rotation 0 0 1 0.261799
+  name "cardboard box 2"
+  size 0.2 0.2 0.2
+}
+Floor {
+  size 1.2 1.2
+  appearance GlossyPaint {
+  }
+}
+Floor {
+  translation 0 0 0.001
+  name "floor(1)"
+  size 1 1
+  appearance CarpetFibers {
+    colorOverride 0 0 0
+  }
+}
+Thymio2 {
+  translation -0.25183478611437987 0.05079314935594777 0.0009799321804785308
+  rotation 0.004752564422146005 -0.0016071195616426967 0.9999874150698738 2.4894420991957893
+  controller "thymio2_aseba_mr_1+2"
+  controllerArgs [
+    "port=2001"
+    "id=1"
+  ]
+  window "thymio2"
+}
