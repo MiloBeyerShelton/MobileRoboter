@@ -8,6 +8,7 @@ Implementieren Sie die Verhalten mithilfe eines Arbiters.
 
 import argparse
 import time
+import math
 from thymiodirect import Connection 
 from thymiodirect import Thymio
 
@@ -40,6 +41,8 @@ class ThymioNetworkNode:
         self.behaviors = []
 
         # TODO: Definieren Sie hier eigene benoetigte Variablen.
+        self.prox_ground = []
+        self.prox_horizontal = []
         self.drive_speed = 200
         
         self.escape_drive_speed = 400
@@ -68,19 +71,19 @@ class ThymioNetworkNode:
 
 
         def action(self): #TODO check IR-sensor values
-            if self.arbiter.prox_ground[0] < 500 or self.arbiter.prox_ground[1] < 500 or self.action_running: 
-                if not self.action_running: # check if this action is currently running. If NOT start backup phase
-                    self.action_running = True
-                    self.backup_duration = time.time()+ distance_to_seconds(0.20 , convert_speed(self.arbiter.escape_drive_speed))
-                    self.command = [-self.arbiter.escape_drive_speed, -self.arbiter.escape_drive_speed] #set motor speeds
-                
-                elif time.time() >= self.backup_duration: # check if reverse duration is over. If so start phase Turn
-                    self.turn_duration = time.time()+ degrees_to_seconds(self.arbiter.escape_turn_deg, convert_speed(self.arbiter.escape_turn_speed))
-                    self.command[-self.arbiter.escape_turn_speed, self.arbiter.escape_turn_speed]
-                elif time.time() >= self.turn_duration: # check if turnduration is over. If so end behavior
-                    self.action_running = False 
+            if self.arbiter.prox_ground[0] > 500 or self.arbiter.prox_ground[1] > 500 or self.action_running: 
+                if self.action_running and self.backup_duration > time.time():
+                    self.command[-200, -200]
+                    return True
+                elif self.action_running and self.backup_duration < time.time():
+                    self.action_running = False
                     return False
-                return True
+                else:
+                    self.backup_duration = time.time()+5
+                    self.action_running = True
+                    self.command[-200, -200]
+                    return True
+
             return False
 
 
@@ -119,14 +122,14 @@ class ThymioNetworkNode:
 
             # Update der IR-Sensoren
             if self.start:
-                self.prox_horizontal = self.robot["prox.horizonal"]
+                self.prox_horizontal = self.robot["prox.horizontal"]
                 self.prox_ground = self.robot["prox.ground.reflected"]
-            
-            # choose behavior and set motor speeds
-            for behaviors in self.behaviors:
-                if behaviors.action():
-                    self.robot["motor.left.target"] = behaviors.command[0]
-                    self.robot["motor.right.target"] = behaviors.command[1]
+                # choose behavior and set motor speeds
+                for behaviors in self.behaviors:
+                    if behaviors.action():
+                        self.robot["motor.left.target"] = behaviors.command[0]
+                        self.robot["motor.right.target"] = behaviors.command[1]
+                        break
 
 
 def main(use_sim=False, ip='localhost', port=2001):
