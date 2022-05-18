@@ -35,7 +35,7 @@ class ThymioNetworkNode:
         self.robot = robot
 
         # True = Roboter wurde gestartet, False = Roboter ist gestoppt
-        self.start = False 
+        self.start = True 
 
         # Liste der Verhalten 
         self.behaviors = []
@@ -45,7 +45,7 @@ class ThymioNetworkNode:
         self.prox_horizontal = []
         self.drive_speed = 200
         
-        self.escape_drive_speed = 400
+        self.escape_drive_speed = 200
         self.escape_turn_speed = 200
         self.escape_turn_deg = 180
 
@@ -72,16 +72,20 @@ class ThymioNetworkNode:
 
         def action(self): #TODO check IR-sensor values
             if self.arbiter.prox_ground[0] > 500 or self.arbiter.prox_ground[1] > 500 or self.action_running: 
-                if self.action_running and self.backup_duration > time.time():
-                    self.command[-200, -200]
+               if self.action_running and self.backup_duration > time.time():
+                    self.command = [-self.arbiter.escape_drive_speed, -self.arbiter.escape_drive_speed]
                     return True
-                elif self.action_running and self.backup_duration < time.time():
+               elif self.action_running and self.backup_duration < time.time() and self.turn_duration > time.time():
+                    self.command = [-self.arbiter.escape_turn_speed, self.arbiter.escape_turn_speed]
+                    return True
+               elif self.action_running and self.backup_duration < time.time() and self.turn_duration < time.time() :
                     self.action_running = False
                     return False
-                else:
-                    self.backup_duration = time.time()+5
+               else:
+                    self.backup_duration = time.time() + distance_to_seconds(0.20, convert_speed(self.arbiter.escape_drive_speed ))
+                    self.turn_duration = self.backup_duration + degrees_to_seconds(180, convert_speed(self.arbiter.escape_turn_speed))
                     self.action_running = True
-                    self.command[-200, -200]
+                    self.command = [-200, -200]
                     return True
 
             return False
@@ -94,10 +98,10 @@ class ThymioNetworkNode:
 
         def action(self):
             if self.arbiter.prox_horizontal[0] > 3200 or self.arbiter.prox_horizontal[1] > 3200:
-                self.command[self.arbiter.avoid_speed, -self.arbiter.avoid_speed]
+                self.command = [self.arbiter.avoid_speed, -self.arbiter.avoid_speed]
                 return True                
             elif self.arbiter.prox_horizontal[3] > 3200 or self.arbiter.prox_horizontal[4] > 3200:
-                self.command[-self.arbiter.avoid_speed, self.arbiter.avoid_speed]
+                self.command = [-self.arbiter.avoid_speed, self.arbiter.avoid_speed]
                 return True
             
             return False
