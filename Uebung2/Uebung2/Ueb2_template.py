@@ -43,7 +43,7 @@ class ThymioNetworkNode:
         # TODO: Definieren Sie hier eigene benoetigte Variablen.
         self.prox_ground = []
         self.prox_horizontal = []
-        self.drive_speed = 200
+        self.drive_speed = 250
         
         self.escape_drive_speed = 200
         self.escape_turn_speed = 200
@@ -71,7 +71,7 @@ class ThymioNetworkNode:
 
 
         def action(self): #TODO check IR-sensor values
-            if self.arbiter.prox_ground[0] < 400 or self.arbiter.prox_ground[1] < 400 or self.action_running: 
+            if self.arbiter.prox_ground[0] > 600 or self.arbiter.prox_ground[1] > 600 or self.action_running: 
                if self.action_running and self.backup_duration > time.time():
                     self.command = [-self.arbiter.escape_drive_speed, -self.arbiter.escape_drive_speed]
                     return True
@@ -97,10 +97,10 @@ class ThymioNetworkNode:
             self.command = [0, 0]
 
         def action(self):
-            if self.arbiter.prox_horizontal[0] > 3200 or self.arbiter.prox_horizontal[1] > 3200:
+            if self.arbiter.prox_horizontal[0] > 2500 or self.arbiter.prox_horizontal[1] > 2500:
                 self.command = [self.arbiter.avoid_speed, -self.arbiter.avoid_speed]
                 return True                
-            elif self.arbiter.prox_horizontal[3] > 3200 or self.arbiter.prox_horizontal[4] > 3200:
+            elif self.arbiter.prox_horizontal[3] > 2500 or self.arbiter.prox_horizontal[4] > 2500:
                 self.command = [-self.arbiter.avoid_speed, self.arbiter.avoid_speed]
                 return True
             
