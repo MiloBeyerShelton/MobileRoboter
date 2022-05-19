@@ -35,7 +35,7 @@ class ThymioNetworkNode:
         self.robot = robot
 
         # True = Roboter wurde gestartet, False = Roboter ist gestoppt
-        self.start = True 
+        self.start = False 
 
         # Liste der Verhalten 
         self.behaviors = []
@@ -71,7 +71,7 @@ class ThymioNetworkNode:
 
 
         def action(self): #TODO check IR-sensor values
-            if self.arbiter.prox_ground[0] > 500 or self.arbiter.prox_ground[1] > 500 or self.action_running: 
+            if self.arbiter.prox_ground[0] < 400 or self.arbiter.prox_ground[1] < 400 or self.action_running: 
                if self.action_running and self.backup_duration > time.time():
                     self.command = [-self.arbiter.escape_drive_speed, -self.arbiter.escape_drive_speed]
                     return True
@@ -120,12 +120,16 @@ class ThymioNetworkNode:
 
             if self.robot["button.forward"] == 1 :
                 self.start = True  
-            elif self.robot["button.center"] == 1 :
+            if self.robot["button.center"] == 1 :
                 self.start = False
+                self.robot["motor.left.target"] = 0
+                self.robot["motor.right.target"] = 0
 
 
             # Update der IR-Sensoren
             if self.start:
+                print("{}   {}".format(self.robot["prox.ground.reflected"][0] , self.robot["prox.horizontal"]))
+
                 self.prox_horizontal = self.robot["prox.horizontal"]
                 self.prox_ground = self.robot["prox.ground.reflected"]
                 # choose behavior and set motor speeds
