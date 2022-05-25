@@ -37,6 +37,7 @@ I2Cadr = 0x29
 I2Cbus = None
 
 # Only needed for real robot. !!! Comment out in simulation !!!
+'''
 import smbus
 import RPi.GPIO as GPIO
 I2Cbus = smbus.SMBus(1)
@@ -44,7 +45,7 @@ I2Cbus.write_byte_data(I2Cadr, 0x00 | 0x80, 0x03)
 I2Cbus.write_byte_data(I2Cadr, 0x01 | 0x80, 0x00)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.OUT, initial=GPIO.LOW)
-
+'''
 
 class ThymioNetworkNode:
     def __init__(self, robot, sim):
@@ -220,7 +221,7 @@ def main(use_sim=False, ip='localhost', port=2001):
         time.sleep(1)
 
         # Create ThymioNetworkNode Object and start Arbiter
-        thymio = ThymioNetworkNode(robot)
+        thymio = ThymioNetworkNode(robot, use_sim)
         thymio.run_beeclust()
 
         # Stop robot
