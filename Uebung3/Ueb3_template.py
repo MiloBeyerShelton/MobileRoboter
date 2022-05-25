@@ -56,7 +56,7 @@ class ThymioNetworkNode:
         self.sim = sim	
 
         # True = Roboter wurde gestartet, False = Roboter ist gestoppt
-        self.start = False 
+        self.start = True 
 
         # State of the robot
         self.state = None
@@ -71,9 +71,10 @@ class ThymioNetworkNode:
         
         self.escape_drive_speed = 200
         self.escape_turn_speed = 200
-        self.escape_turn_deg = 180
+        self.escape_turn_deg = 60
 
-        self.avoid_speed = self.drive_speed 
+        self.avoid_turn_speed = 200 
+        self.avoid_turn_deg = 180
 
     
     class Cruise:
@@ -107,7 +108,7 @@ class ThymioNetworkNode:
                     return False
                else:
                     self.backup_duration = time.time() + distance_to_seconds(0.20, convert_speed(self.arbiter.escape_drive_speed ))
-                    self.turn_duration = self.backup_duration + degrees_to_seconds(180, convert_speed(self.arbiter.escape_turn_speed))
+                    self.turn_duration = self.backup_duration + degrees_to_seconds(self.arbiter.escape_turn_deg, convert_speed(self.arbiter.escape_turn_speed))
                     self.action_running = True
                     self.command = [-200, -200]
                     return True
@@ -124,24 +125,24 @@ class ThymioNetworkNode:
 
         def action(self): # TODO hier muss noch das beeclust behavior implementiert werden 
             luminance = self.arbiter.get_luminance(self.arbiter.robot) 
+            proxis = self.arbiter.prox_horizontal
+
             if self.action_running: 
-                if self.wait_duration < time.time():
+                if self.wait_duration > time.time():
                     self.command= [0,0]
+                    return True
+                elif self.turn_duration > time.time():
+                    self.command= [self.arbiter.avoid_turn_speed,-self.arbiter.avoid_turn_speed]
                     return True
                 else:
                     self.action_running = False
                     return False
-
-            elif self.arbiter.prox_horizontal[0] > 2500 or self.arbiter.prox_horizontal[1] > 2500 and not luminance > 1000: # check the value for luminance
-                self.command = [self.arbiter.avoid_speed, -self.arbiter.avoid_speed]
-                return True                
-            elif self.arbiter.prox_horizontal[3] > 2500 or self.arbiter.prox_horizontal[4] > 2500 and not luminance > 1000: # check the value for luminance
-                self.command = [-self.arbiter.avoid_speed, self.arbiter.avoid_speed]
-                return True
-            elif luminance > 1000: # check the value for luminance
+                    
+            elif [True for i in proxis if i > 2500]:
                 self.command= [0,0]
                 self.action_running = True
                 self.wait_duration = time.time() + self.arbiter.calc_waiting(I_SCALE = luminance)
+                self.turn_duration = self.wait_duration + degrees_to_seconds(self.arbiter.avoid_turn_deg, convert_speed(self.arbiter.avoid_turn_speed))
                 return True
             return False
 
@@ -163,7 +164,7 @@ class ThymioNetworkNode:
                 self.robot["motor.right.target"] = 0
 
             if self.start:
-                print("{}   {}".format(self.robot["prox.ground.reflected"][0] , self.robot["prox.horizontal"]))
+               # print("{}   {}".format(self.robot["prox.ground.reflected"][0] , self.robot["prox.horizontal"]))
 
                 self.prox_horizontal = self.robot["prox.horizontal"]
                 self.prox_ground = self.robot["prox.ground.reflected"]
@@ -194,7 +195,7 @@ class ThymioNetworkNode:
         luminance = self.get_luminance(self.robot)
         waitingTime = 0
         i_scale = (I_SCALE - I_MIN)*((1500)/(I_MAX-I_MIN))
-        waitingTime = (W_MAX*math.pow(i_scale, 2))/(math.pow(i_scale, 2)+C)
+        waitingTime = math.ceil((W_MAX*math.pow(i_scale, 2))/(math.pow(i_scale, 2)+C)/10)
 
         print('luminance = ' + str(luminance))
         print('waiting time = ' + str(waitingTime))
