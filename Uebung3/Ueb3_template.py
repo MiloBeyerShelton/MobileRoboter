@@ -7,6 +7,8 @@ Implementieren Sie den Beeclust Algorithmus als finite state machine.
 '''
 
 import argparse
+from multiprocessing import set_forkserver_preload
+from re import S
 import time
 import math
 from random import randint, random
@@ -92,10 +94,30 @@ class ThymioNetworkNode:
             self.command = [0, 0]
             self.backup_duration = 0 
             self.turn_duration = 0
-            self.action_running = False 
-
+            #self.action_running = False 
+            self.state = "sensorCheck" # sensoreCheck, activeBackup, activeTurn
 
         def action(self): #TODO check IR-sensor values
+            if self.state == "sensorCheck" and self.arbiter.prox_ground[0] > 600 or self.arbiter.prox_ground[1] > 600:
+                self.backup_duration = time.time() + distance_to_seconds(0.20, convert_speed(self.arbiter.escape_drive_speed ))
+                self.turn_duration = self.backup_duration + degrees_to_seconds(self.arbiter.escape_turn_deg, convert_speed(self.arbiter.escape_turn_speed))
+                self.state = "activeBackup"
+                self.command = [-200, -200]
+                return True
+            elif self.state == "activeBackup":
+                if self.backup_duration < time.time():
+                    self.state = "activeTurn"
+                    return True
+                self.command = [-200, -200]
+                return True
+            elif self.state == "activeTurn":
+                if self.turn_duration < time.time():
+                    self.state = "sensorCheck"
+                    return False
+                self.command = [-self.arbiter.escape_turn_speed, self.arbiter.escape_turn_speed]
+                return True
+            return False
+'''
             if self.arbiter.prox_ground[0] > 600 or self.arbiter.prox_ground[1] > 600 or self.action_running: 
                if self.action_running and self.backup_duration > time.time():
                     self.command = [-self.arbiter.escape_drive_speed, -self.arbiter.escape_drive_speed]
@@ -112,8 +134,8 @@ class ThymioNetworkNode:
                     self.action_running = True
                     self.command = [-200, -200]
                     return True
-
             return False
+'''
 
     class Avoid:
         def __init__(self, node):
@@ -121,12 +143,34 @@ class ThymioNetworkNode:
             self.command = [0, 0]
             self.wait_duration = 0
             self.turn_duration = 0
-            self.action_running = False 
+            #self.action_running = False 
+            self.state = "colisionCheck" # colisionCheck, activeWait, activeTurn
 
-        def action(self): # TODO hier muss noch das beeclust behavior implementiert werden 
+        def action(self):
             luminance = self.arbiter.get_luminance(self.arbiter.robot) 
             proxis = self.arbiter.prox_horizontal
 
+            if self.state == "colisionCheck" and [True for i in proxis if i > 2500]:
+                self.command= [0,0]
+                self.state = "activeWait"
+                self.wait_duration = time.time() + self.arbiter.calc_waiting(I_SCALE = luminance)
+                self.turn_duration = self.wait_duration + degrees_to_seconds(self.arbiter.avoid_turn_deg, convert_speed(self.arbiter.avoid_turn_speed))
+                return True
+            elif self.state == "activeWait":
+                if self.wait_duration < time.time():
+                    self.state = "activeTurn"
+                    self.command= [self.arbiter.avoid_turn_speed,-self.arbiter.avoid_turn_speed]
+                    return True
+                self.command= [0,0]
+                return True
+            elif self.state == "activeTurn":
+                if self.turn_duration < time.time():
+                    self.state = "colisionCheck"
+                    return False
+                self.command= [self.arbiter.avoid_turn_speed,-self.arbiter.avoid_turn_speed]
+                return True 
+            return False
+'''
             if self.action_running: 
                 if self.wait_duration > time.time():
                     self.command= [0,0]
@@ -145,6 +189,7 @@ class ThymioNetworkNode:
                 self.turn_duration = self.wait_duration + degrees_to_seconds(self.arbiter.avoid_turn_deg, convert_speed(self.arbiter.avoid_turn_speed))
                 return True
             return False
+'''
 
 
     def run_beeclust(self):
