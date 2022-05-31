@@ -117,25 +117,6 @@ class ThymioNetworkNode:
                 self.command = [-self.arbiter.escape_turn_speed, self.arbiter.escape_turn_speed]
                 return True
             return False
-'''
-            if self.arbiter.prox_ground[0] > 600 or self.arbiter.prox_ground[1] > 600 or self.action_running: 
-               if self.action_running and self.backup_duration > time.time():
-                    self.command = [-self.arbiter.escape_drive_speed, -self.arbiter.escape_drive_speed]
-                    return True
-               elif self.action_running and self.backup_duration < time.time() and self.turn_duration > time.time():
-                    self.command = [-self.arbiter.escape_turn_speed, self.arbiter.escape_turn_speed]
-                    return True
-               elif self.action_running and self.backup_duration < time.time() and self.turn_duration < time.time() :
-                    self.action_running = False
-                    return False
-               else:
-                    self.backup_duration = time.time() + distance_to_seconds(0.20, convert_speed(self.arbiter.escape_drive_speed ))
-                    self.turn_duration = self.backup_duration + degrees_to_seconds(self.arbiter.escape_turn_deg, convert_speed(self.arbiter.escape_turn_speed))
-                    self.action_running = True
-                    self.command = [-200, -200]
-                    return True
-            return False
-'''
 
     class Avoid:
         def __init__(self, node):
@@ -170,27 +151,6 @@ class ThymioNetworkNode:
                 self.command= [self.arbiter.avoid_turn_speed,-self.arbiter.avoid_turn_speed]
                 return True 
             return False
-'''
-            if self.action_running: 
-                if self.wait_duration > time.time():
-                    self.command= [0,0]
-                    return True
-                elif self.turn_duration > time.time():
-                    self.command= [self.arbiter.avoid_turn_speed,-self.arbiter.avoid_turn_speed]
-                    return True
-                else:
-                    self.action_running = False
-                    return False
-                    
-            elif [True for i in proxis if i > 2500]:
-                self.command= [0,0]
-                self.action_running = True
-                self.wait_duration = time.time() + self.arbiter.calc_waiting(I_SCALE = luminance)
-                self.turn_duration = self.wait_duration + degrees_to_seconds(self.arbiter.avoid_turn_deg, convert_speed(self.arbiter.avoid_turn_speed))
-                return True
-            return False
-'''
-
 
     def run_beeclust(self):
         ''' Beeclust algorithm '''
