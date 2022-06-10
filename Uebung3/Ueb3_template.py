@@ -39,7 +39,7 @@ I2Cadr = 0x29
 I2Cbus = None
 
 # Only needed for real robot. !!! Comment out in simulation !!!
-'''
+
 import smbus
 import RPi.GPIO as GPIO
 I2Cbus = smbus.SMBus(1)
@@ -47,7 +47,7 @@ I2Cbus.write_byte_data(I2Cadr, 0x00 | 0x80, 0x03)
 I2Cbus.write_byte_data(I2Cadr, 0x01 | 0x80, 0x00)
 GPIO.setmode(GPIO.BCM)
 GPIO.setup(4, GPIO.OUT, initial=GPIO.LOW)
-'''
+
 
 class ThymioNetworkNode:
     def __init__(self, robot, sim):
@@ -58,7 +58,7 @@ class ThymioNetworkNode:
         self.sim = sim	
 
         # True = Roboter wurde gestartet, False = Roboter ist gestoppt
-        self.start = True 
+        self.start = False 
 
         # State of the robot
         self.state = None
@@ -86,6 +86,7 @@ class ThymioNetworkNode:
 
         def action(self):
             self.command = [self.arbiter.drive_speed, self.arbiter.drive_speed]
+            print("cruise")
             return True
 
     class Escape:
@@ -98,7 +99,8 @@ class ThymioNetworkNode:
             self.state = "sensorCheck" # sensoreCheck, activeBackup, activeTurn
 
         def action(self): #TODO check IR-sensor values
-            if self.state == "sensorCheck" and self.arbiter.prox_ground[0] > 600 or self.arbiter.prox_ground[1] > 600:
+            print(self.arbiter.prox_ground[0])
+            if self.state == "sensorCheck" and (self.arbiter.prox_ground[0] > 650 or self.arbiter.prox_ground[1] > 650):
                 self.backup_duration = time.time() + distance_to_seconds(0.20, convert_speed(self.arbiter.escape_drive_speed ))
                 self.turn_duration = self.backup_duration + degrees_to_seconds(self.arbiter.escape_turn_deg, convert_speed(self.arbiter.escape_turn_speed))
                 self.state = "activeBackup"
@@ -195,12 +197,12 @@ class ThymioNetworkNode:
             return int((data[1] << 8) + data[0])
 
 
-    def calc_waiting(self, I_SCALE = 1500, I_MAX = 1000, I_MIN = 30, W_MAX = 90, C = 7000.0 * 5625.0/81.0):
+    def calc_waiting(self, I_SCALE = 1500, I_MAX = 65000, I_MIN = 300, W_MAX = 90, C = 7000.0 * 5625.0/81.0):
         ''' Calculates the waiting time for the robot '''
         luminance = self.get_luminance(self.robot)
         waitingTime = 0
         i_scale = (I_SCALE - I_MIN)*((1500)/(I_MAX-I_MIN))
-        waitingTime = math.ceil((W_MAX*math.pow(i_scale, 2))/(math.pow(i_scale, 2)+C)/10)
+        waitingTime = math.ceil((W_MAX*math.pow(i_scale, 2))/(math.pow(i_scale, 2)+C))
 
         print('luminance = ' + str(luminance))
         print('waiting time = ' + str(waitingTime))
