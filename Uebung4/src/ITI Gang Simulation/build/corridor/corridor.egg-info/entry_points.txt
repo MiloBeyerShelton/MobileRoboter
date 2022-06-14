@@ -1,0 +1,4 @@
+[console_scripts]
+TestNode = corridor.TestNode:main
+add_bot_node = corridor.add_bot_node:main
+
