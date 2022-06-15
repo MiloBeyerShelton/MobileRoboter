@@ -32,7 +32,7 @@ class PotentialField(Node):
         x = 0
         y = 0
         for idx, i in enumerate(msg.ranges):
-            if i != float("inf") and i < 2:
+            if i != float("inf") and i < 0.2:
                 #print("idx: {} i: {} x: {} y: {}".format(idx, i, -math.cos(idx), -math.sin(idx)))
                 x += -math.cos(math.radians(idx)) *(1/i)
                 y += -math.sin(math.radians(idx)) *(1/i)
