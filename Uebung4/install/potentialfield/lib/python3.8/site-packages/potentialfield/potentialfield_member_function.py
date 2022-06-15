@@ -41,7 +41,7 @@ class PotentialField(Node):
                 y += math.sin(math.radians(idx))*2
                 
 
-        angularZ = math.acos(math.radians(((x*1)+(y*0))/(math.sqrt(x**2+y**2)*(1))))*(math.pi/180)
+        angularZ = math.acos(math.radians(((x*1)+(y*0))/(math.sqrt(x**2+y**2)*(1))))*(math.pi/180)*1.3
         if angularZ > 1.82:
             if y < 0:
                 self.z_angular_vel = -1.82
