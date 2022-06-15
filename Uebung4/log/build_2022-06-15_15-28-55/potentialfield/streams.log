@@ -1,0 +1,27 @@
+[0.479s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --uninstall --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build
+[0.667s] running develop
+[0.784s] Invoked command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield' returned '0': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --uninstall --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build
+[0.785s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/src/potentialfield': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/potentialfield build --build-base /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build install --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --record /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/install.log --single-version-externally-managed
+[0.950s] running egg_info
+[0.950s] writing ../../build/potentialfield/potentialfield.egg-info/PKG-INFO
+[0.951s] writing dependency_links to ../../build/potentialfield/potentialfield.egg-info/dependency_links.txt
+[0.951s] writing entry points to ../../build/potentialfield/potentialfield.egg-info/entry_points.txt
+[0.951s] writing requirements to ../../build/potentialfield/potentialfield.egg-info/requires.txt
+[0.951s] writing top-level names to ../../build/potentialfield/potentialfield.egg-info/top_level.txt
+[0.980s] reading manifest file '../../build/potentialfield/potentialfield.egg-info/SOURCES.txt'
+[0.980s] writing manifest file '../../build/potentialfield/potentialfield.egg-info/SOURCES.txt'
+[0.980s] running build
+[0.980s] running build_py
+[0.980s] copying potentialfield/potentialfield_member_function.py -> /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield
+[0.981s] running install
+[0.981s] running install_lib
+[0.982s] copying /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield/potentialfield_member_function.py -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield
+[0.983s] byte-compiling /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield/potentialfield_member_function.py to potentialfield_member_function.cpython-38.pyc
+[0.984s] running install_data
+[0.984s] running install_egg_info
+[0.985s] removing '/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield-0.0.0-py3.8.egg-info' (and everything under it)
+[0.986s] Copying ../../build/potentialfield/potentialfield.egg-info to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield-0.0.0-py3.8.egg-info
+[0.986s] running install_scripts
+[1.000s] Installing potentialfield script to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/potentialfield
+[1.000s] writing list of installed files to '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/install.log'
+[1.016s] Invoked command in '/home/milo/Desktop/MobileRoboter/Uebung4/src/potentialfield' returned '0': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/potentialfield build --build-base /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build install --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --record /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/install.log --single-version-externally-managed

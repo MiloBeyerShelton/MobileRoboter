@@ -1,0 +1,30 @@
+running develop
+Removing /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield.egg-link (link to .)
+running egg_info
+writing ../../build/potentialfield/potentialfield.egg-info/PKG-INFO
+writing dependency_links to ../../build/potentialfield/potentialfield.egg-info/dependency_links.txt
+writing entry points to ../../build/potentialfield/potentialfield.egg-info/entry_points.txt
+writing requirements to ../../build/potentialfield/potentialfield.egg-info/requires.txt
+writing top-level names to ../../build/potentialfield/potentialfield.egg-info/top_level.txt
+reading manifest file '../../build/potentialfield/potentialfield.egg-info/SOURCES.txt'
+writing manifest file '../../build/potentialfield/potentialfield.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build
+creating /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib
+creating /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield
+copying potentialfield/__init__.py -> /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield
+copying potentialfield/potentialfield_member_function.py -> /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield
+running install
+running install_lib
+creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield
+copying /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield/__init__.py -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield
+copying /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield/potentialfield_member_function.py -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield
+byte-compiling /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield/__init__.py to __init__.cpython-38.pyc
+byte-compiling /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield/potentialfield_member_function.py to potentialfield_member_function.cpython-38.pyc
+running install_data
+running install_egg_info
+Copying ../../build/potentialfield/potentialfield.egg-info to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield-0.0.0-py3.8.egg-info
+running install_scripts
+Installing potentialfield script to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/potentialfield
+writing list of installed files to '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/install.log'

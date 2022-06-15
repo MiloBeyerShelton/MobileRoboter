@@ -1,0 +1,185 @@
+[0.000000] (-) TimerEvent: {}
+[0.000157] (corridor) JobQueued: {'identifier': 'corridor', 'dependencies': OrderedDict()}
+[0.000213] (potentialfield) JobQueued: {'identifier': 'potentialfield', 'dependencies': OrderedDict()}
+[0.000232] (turtlebot3_fake_node) JobQueued: {'identifier': 'turtlebot3_fake_node', 'dependencies': OrderedDict()}
+[0.000595] (turtlebot3_gazebo) JobQueued: {'identifier': 'turtlebot3_gazebo', 'dependencies': OrderedDict()}
+[0.000695] (turtlebot3_simulations) JobQueued: {'identifier': 'turtlebot3_simulations', 'dependencies': OrderedDict([('turtlebot3_fake_node', '/home/milo/Desktop/MobileRoboter/Uebung4/install/turtlebot3_fake_node'), ('turtlebot3_gazebo', '/home/milo/Desktop/MobileRoboter/Uebung4/install/turtlebot3_gazebo')])}
+[0.000840] (turtlebot3_fake_node) JobStarted: {'identifier': 'turtlebot3_fake_node'}
+[0.007631] (turtlebot3_gazebo) JobStarted: {'identifier': 'turtlebot3_gazebo'}
+[0.011543] (corridor) JobStarted: {'identifier': 'corridor'}
+[0.017562] (potentialfield) JobStarted: {'identifier': 'potentialfield'}
+[0.024818] (turtlebot3_fake_node) JobProgress: {'identifier': 'turtlebot3_fake_node', 'progress': 'cmake'}
+[0.025336] (turtlebot3_fake_node) Command: {'cmd': ['/usr/bin/cmake', '/home/milo/Desktop/MobileRoboter/Uebung4/src/turtlebot3_simulations/turtlebot3_fake_node', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/milo/Desktop/MobileRoboter/Uebung4/install/turtlebot3_fake_node'], 'cwd': '/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'milo'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '1351'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/milo'), ('OLDPWD', '/home/milo/Desktop/MobileRoboter/Uebung4/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '1042'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'milo'), ('JOURNAL_STREAM', '8:32657'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'milo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/milo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/milo-System-Product-Name:@/tmp/.ICE-unix/1417,unix/milo-System-Product-Name:/tmp/.ICE-unix/1417'), ('INVOCATION_ID', '99b5fb10a5f34165b3c3d5fdb60cd033'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cfd802ba_371a_4f2a_882f_8d7907bd3919'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.248'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.029829] (turtlebot3_gazebo) JobProgress: {'identifier': 'turtlebot3_gazebo', 'progress': 'cmake'}
+[0.030196] (turtlebot3_gazebo) Command: {'cmd': ['/usr/bin/cmake', '/home/milo/Desktop/MobileRoboter/Uebung4/src/turtlebot3_simulations/turtlebot3_gazebo', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/milo/Desktop/MobileRoboter/Uebung4/install/turtlebot3_gazebo'], 'cwd': '/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_gazebo', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'milo'), ('LC_TIME', 'de_DE.UTF-8'), ('SSH_AGENT_PID', '1351'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib'), ('HOME', '/home/milo'), ('OLDPWD', '/home/milo/Desktop/MobileRoboter/Uebung4/src'), ('DESKTOP_SESSION', 'ubuntu'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('LC_MONETARY', 'de_DE.UTF-8'), ('MANAGERPID', '1042'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'foxy'), ('LOGNAME', 'milo'), ('JOURNAL_STREAM', '8:32657'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('USERNAME', 'milo'), ('TERM', 'xterm-256color'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('PATH', '/opt/ros/foxy/bin:/home/milo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('SESSION_MANAGER', 'local/milo-System-Product-Name:@/tmp/.ICE-unix/1417,unix/milo-System-Product-Name:/tmp/.ICE-unix/1417'), ('INVOCATION_ID', '99b5fb10a5f34165b3c3d5fdb60cd033'), ('XDG_MENU_PREFIX', 'gnome-'), ('LC_ADDRESS', 'de_DE.UTF-8'), ('GNOME_TERMINAL_SCREEN', '/org/gnome/Terminal/screen/cfd802ba_371a_4f2a_882f_8d7907bd3919'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('LC_TELEPHONE', 'de_DE.UTF-8'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('GNOME_TERMINAL_SERVICE', ':1.248'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('AMENT_PREFIX_PATH', '/opt/ros/foxy'), ('SHELL', '/bin/bash'), ('LC_NAME', 'de_DE.UTF-8'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('LC_MEASUREMENT', 'de_DE.UTF-8'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('LC_IDENTIFICATION', 'de_DE.UTF-8'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_gazebo'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/foxy/lib/python3.8/site-packages'), ('LC_NUMERIC', 'de_DE.UTF-8'), ('LC_PAPER', 'de_DE.UTF-8'), ('COLCON', '1'), ('VTE_VERSION', '6003'), ('CMAKE_PREFIX_PATH', '/opt/ros/foxy')]), 'shell': False}
+[0.099886] (-) TimerEvent: {}
+[0.200234] (-) TimerEvent: {}
+[0.300520] (-) TimerEvent: {}
+[0.363184] (turtlebot3_fake_node) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.363812] (turtlebot3_gazebo) StdoutLine: {'line': b'-- The C compiler identification is GNU 9.4.0\n'}
+[0.400637] (-) TimerEvent: {}
+[0.500966] (-) TimerEvent: {}
+[0.571408] (turtlebot3_gazebo) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.571743] (turtlebot3_fake_node) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 9.4.0\n'}
+[0.581588] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.581709] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc\n'}
+[0.601079] (-) TimerEvent: {}
+[0.643678] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.643832] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc -- works\n'}
+[0.645576] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.645687] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.648503] (corridor) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--prefix', '/home/milo/Desktop/MobileRoboter/Uebung4/install/corridor', '--editable', '--build-directory', '/home/milo/Desktop/MobileRoboter/Uebung4/build/corridor/build', '--no-deps', 'install_data', '--install-dir', '/home/milo/Desktop/MobileRoboter/Uebung4/install/corridor'], 'cwd': '/home/milo/Desktop/MobileRoboter/Uebung4/build/corridor', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'milo', 'LC_TIME': 'de_DE.UTF-8', 'SSH_AGENT_PID': '1351', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/milo', 'OLDPWD': '/home/milo/Desktop/MobileRoboter/Uebung4/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '1042', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'milo', 'JOURNAL_STREAM': '8:32657', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'milo', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/milo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/milo-System-Product-Name:@/tmp/.ICE-unix/1417,unix/milo-System-Product-Name:/tmp/.ICE-unix/1417', 'INVOCATION_ID': '99b5fb10a5f34165b3c3d5fdb60cd033', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/cfd802ba_371a_4f2a_882f_8d7907bd3919', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.248', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/milo/Desktop/MobileRoboter/Uebung4/build/corridor', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'de_DE.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.657345] (potentialfield) Command: {'cmd': ['/usr/bin/python3', 'setup.py', 'develop', '--prefix', '/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield', '--editable', '--build-directory', '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build', '--no-deps', 'install_data', '--install-dir', '/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield'], 'cwd': '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield', 'env': {'GJS_DEBUG_TOPICS': 'JS ERROR;JS LOG', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'USER': 'milo', 'LC_TIME': 'de_DE.UTF-8', 'SSH_AGENT_PID': '1351', 'XDG_SESSION_TYPE': 'x11', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/foxy/opt/yaml_cpp_vendor/lib:/opt/ros/foxy/opt/rviz_ogre_vendor/lib:/opt/ros/foxy/lib/x86_64-linux-gnu:/opt/ros/foxy/lib', 'HOME': '/home/milo', 'OLDPWD': '/home/milo/Desktop/MobileRoboter/Uebung4/src', 'DESKTOP_SESSION': 'ubuntu', 'ROS_PYTHON_VERSION': '3', 'GNOME_SHELL_SESSION_MODE': 'ubuntu', 'GTK_MODULES': 'gail:atk-bridge', 'LC_MONETARY': 'de_DE.UTF-8', 'MANAGERPID': '1042', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/1000/bus', 'COLORTERM': 'truecolor', 'IM_CONFIG_PHASE': '1', 'ROS_DISTRO': 'foxy', 'LOGNAME': 'milo', 'JOURNAL_STREAM': '8:32657', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'XDG_SESSION_CLASS': 'user', 'USERNAME': 'milo', 'TERM': 'xterm-256color', 'GNOME_DESKTOP_SESSION_ID': 'this-is-deprecated', 'ROS_LOCALHOST_ONLY': '0', 'WINDOWPATH': '2', 'PATH': '/opt/ros/foxy/bin:/home/milo/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin', 'SESSION_MANAGER': 'local/milo-System-Product-Name:@/tmp/.ICE-unix/1417,unix/milo-System-Product-Name:/tmp/.ICE-unix/1417', 'INVOCATION_ID': '99b5fb10a5f34165b3c3d5fdb60cd033', 'XDG_MENU_PREFIX': 'gnome-', 'LC_ADDRESS': 'de_DE.UTF-8', 'GNOME_TERMINAL_SCREEN': '/org/gnome/Terminal/screen/cfd802ba_371a_4f2a_882f_8d7907bd3919', 'XDG_RUNTIME_DIR': '/run/user/1000', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'XDG_CURRENT_DESKTOP': 'ubuntu:GNOME', 'LC_TELEPHONE': 'de_DE.UTF-8', 'XMODIFIERS': '@im=ibus', 'XDG_SESSION_DESKTOP': 'ubuntu', 'XAUTHORITY': '/run/user/1000/gdm/Xauthority', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'GNOME_TERMINAL_SERVICE': ':1.248', 'SSH_AUTH_SOCK': '/run/user/1000/keyring/ssh', 'AMENT_PREFIX_PATH': '/opt/ros/foxy', 'SHELL': '/bin/bash', 'LC_NAME': 'de_DE.UTF-8', 'QT_ACCESSIBILITY': '1', 'GDMSESSION': 'ubuntu', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'LC_MEASUREMENT': 'de_DE.UTF-8', 'GPG_AGENT_INFO': '/run/user/1000/gnupg/S.gpg-agent:0:1', 'GJS_DEBUG_OUTPUT': 'stderr', 'LC_IDENTIFICATION': 'de_DE.UTF-8', 'QT_IM_MODULE': 'ibus', 'PWD': '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield', 'XDG_CONFIG_DIRS': '/etc/xdg/xdg-ubuntu:/etc/xdg', 'XDG_DATA_DIRS': '/usr/share/ubuntu:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop', 'PYTHONPATH': '/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:/opt/ros/foxy/lib/python3.8/site-packages', 'LC_NUMERIC': 'de_DE.UTF-8', 'LC_PAPER': 'de_DE.UTF-8', 'COLCON': '1', 'VTE_VERSION': '6003'}, 'shell': False}
+[0.701174] (-) TimerEvent: {}
+[0.703442] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.703620] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.720843] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.721067] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.721539] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.721620] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.725629] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.725801] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++\n'}
+[0.789106] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.789315] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ -- works\n'}
+[0.790382] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.790455] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.801259] (-) TimerEvent: {}
+[0.827830] (potentialfield) StdoutLine: {'line': b'running develop\n'}
+[0.838503] (corridor) StdoutLine: {'line': b'running develop\n'}
+[0.856317] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.856557] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.865986] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.866394] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.873473] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.874097] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.874763] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.877204] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)\n'}
+[0.897878] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.898035] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.898175] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") \n'}
+[0.898278] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.901317] (-) TimerEvent: {}
+[0.935238] (potentialfield) StdoutLine: {'line': b'running egg_info\n'}
+[0.935476] (potentialfield) StdoutLine: {'line': b'creating potentialfield.egg-info\n'}
+[0.935595] (potentialfield) StdoutLine: {'line': b'writing potentialfield.egg-info/PKG-INFO\n'}
+[0.935745] (potentialfield) StdoutLine: {'line': b'writing dependency_links to potentialfield.egg-info/dependency_links.txt\n'}
+[0.935901] (potentialfield) StdoutLine: {'line': b'writing entry points to potentialfield.egg-info/entry_points.txt\n'}
+[0.936051] (potentialfield) StdoutLine: {'line': b'writing requirements to potentialfield.egg-info/requires.txt\n'}
+[0.936151] (potentialfield) StdoutLine: {'line': b'writing top-level names to potentialfield.egg-info/top_level.txt\n'}
+[0.937304] (potentialfield) StdoutLine: {'line': b"writing manifest file 'potentialfield.egg-info/SOURCES.txt'\n"}
+[0.958681] (corridor) StdoutLine: {'line': b'running egg_info\n'}
+[0.958852] (corridor) StdoutLine: {'line': b'creating corridor.egg-info\n'}
+[0.958934] (corridor) StdoutLine: {'line': b'writing corridor.egg-info/PKG-INFO\n'}
+[0.959020] (corridor) StdoutLine: {'line': b'writing dependency_links to corridor.egg-info/dependency_links.txt\n'}
+[0.959168] (corridor) StdoutLine: {'line': b'writing entry points to corridor.egg-info/entry_points.txt\n'}
+[0.959300] (corridor) StdoutLine: {'line': b'writing requirements to corridor.egg-info/requires.txt\n'}
+[0.959360] (corridor) StdoutLine: {'line': b'writing top-level names to corridor.egg-info/top_level.txt\n'}
+[0.960145] (corridor) StdoutLine: {'line': b"writing manifest file 'corridor.egg-info/SOURCES.txt'\n"}
+[0.969734] (potentialfield) StdoutLine: {'line': b"reading manifest file 'potentialfield.egg-info/SOURCES.txt'\n"}
+[0.970148] (potentialfield) StdoutLine: {'line': b"writing manifest file 'potentialfield.egg-info/SOURCES.txt'\n"}
+[0.984345] (corridor) StdoutLine: {'line': b"reading manifest file 'corridor.egg-info/SOURCES.txt'\n"}
+[0.984797] (corridor) StdoutLine: {'line': b"writing manifest file 'corridor.egg-info/SOURCES.txt'\n"}
+[1.000495] (potentialfield) StdoutLine: {'line': b'running build_ext\n'}
+[1.000708] (potentialfield) StdoutLine: {'line': b'Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/site.py\n'}
+[1.001388] (-) TimerEvent: {}
+[1.002093] (potentialfield) StdoutLine: {'line': b'Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield.egg-link (link to .)\n'}
+[1.002662] (potentialfield) StdoutLine: {'line': b'Installing potentialfield script to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/potentialfield\n'}
+[1.002843] (potentialfield) StdoutLine: {'line': b'\n'}
+[1.003030] (potentialfield) StdoutLine: {'line': b'Installed /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield\n'}
+[1.003208] (potentialfield) StdoutLine: {'line': b'running install_data\n'}
+[1.003301] (potentialfield) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index\n'}
+[1.003388] (potentialfield) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index\n'}
+[1.003471] (potentialfield) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index/packages\n'}
+[1.003553] (potentialfield) StdoutLine: {'line': b'copying resource/potentialfield -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index/packages\n'}
+[1.003635] (potentialfield) StdoutLine: {'line': b'copying package.xml -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/potentialfield\n'}
+[1.012093] (corridor) StdoutLine: {'line': b'running build_ext\n'}
+[1.012360] (corridor) StdoutLine: {'line': b'Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/python3.8/site-packages/site.py\n'}
+[1.014013] (corridor) StdoutLine: {'line': b'Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/python3.8/site-packages/corridor.egg-link (link to .)\n'}
+[1.014698] (corridor) StdoutLine: {'line': b'Installing TestNode script to /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/corridor\n'}
+[1.014874] (corridor) StdoutLine: {'line': b'Installing add_bot_node script to /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/corridor\n'}
+[1.015089] (corridor) StdoutLine: {'line': b'\n'}
+[1.015216] (corridor) StdoutLine: {'line': b'Installed /home/milo/Desktop/MobileRoboter/Uebung4/build/corridor\n'}
+[1.015359] (corridor) StdoutLine: {'line': b'running install_data\n'}
+[1.015497] (corridor) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index\n'}
+[1.015624] (corridor) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index/resource_index\n'}
+[1.015747] (corridor) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index/resource_index/packages\n'}
+[1.015865] (corridor) StdoutLine: {'line': b'copying resource/corridor -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index/resource_index/packages\n'}
+[1.016006] (corridor) StdoutLine: {'line': b'copying package.xml -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor\n'}
+[1.016103] (corridor) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/launch\n'}
+[1.016217] (corridor) StdoutLine: {'line': b'copying launch/start_gazebo_corridor.launch.py -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/launch\n'}
+[1.016350] (corridor) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/worlds\n'}
+[1.016468] (corridor) StdoutLine: {'line': b'copying worlds/iti_gang_world.world -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/worlds\n'}
+[1.016580] (corridor) StdoutLine: {'line': b'copying worlds/iti_gang.world -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/worlds\n'}
+[1.016673] (corridor) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models\n'}
+[1.016759] (corridor) StdoutLine: {'line': b'creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models/itiGang\n'}
+[1.016844] (corridor) StdoutLine: {'line': b'copying models/itiGang/model.sdf -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models/itiGang\n'}
+[1.016929] (corridor) StdoutLine: {'line': b'copying models/itiGang/model.config -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models/itiGang\n'}
+[1.038542] (potentialfield) CommandEnded: {'returncode': 0}
+[1.042623] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.043710] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[1.052264] (potentialfield) JobEnded: {'identifier': 'potentialfield', 'rc': 0}
+[1.053255] (corridor) CommandEnded: {'returncode': 0}
+[1.058930] (corridor) JobEnded: {'identifier': 'corridor', 'rc': 0}
+[1.079570] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)\n'}
+[1.089982] (turtlebot3_gazebo) StderrLine: {'line': b'CMake Error at CMakeLists.txt:23 (find_package):\n'}
+[1.090164] (turtlebot3_gazebo) StderrLine: {'line': b'  By not providing "Findgazebo.cmake" in CMAKE_MODULE_PATH this project has\n'}
+[1.090263] (turtlebot3_gazebo) StderrLine: {'line': b'  asked CMake to find a package configuration file provided by "gazebo", but\n'}
+[1.090354] (turtlebot3_gazebo) StderrLine: {'line': b'  CMake did not find one.\n'}
+[1.090445] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[1.090533] (turtlebot3_gazebo) StderrLine: {'line': b'  Could not find a package configuration file provided by "gazebo" with any\n'}
+[1.090615] (turtlebot3_gazebo) StderrLine: {'line': b'  of the following names:\n'}
+[1.090689] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[1.090767] (turtlebot3_gazebo) StderrLine: {'line': b'    gazeboConfig.cmake\n'}
+[1.090845] (turtlebot3_gazebo) StderrLine: {'line': b'    gazebo-config.cmake\n'}
+[1.090975] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[1.091078] (turtlebot3_gazebo) StderrLine: {'line': b'  Add the installation prefix of "gazebo" to CMAKE_PREFIX_PATH or set\n'}
+[1.091183] (turtlebot3_gazebo) StderrLine: {'line': b'  "gazebo_DIR" to a directory containing one of the above files.  If "gazebo"\n'}
+[1.091272] (turtlebot3_gazebo) StderrLine: {'line': b'  provides a separate development package or SDK, be sure it has been\n'}
+[1.091366] (turtlebot3_gazebo) StderrLine: {'line': b'  installed.\n'}
+[1.091455] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[1.091542] (turtlebot3_gazebo) StderrLine: {'line': b'\n'}
+[1.091642] (turtlebot3_gazebo) StdoutLine: {'line': b'-- Configuring incomplete, errors occurred!\n'}
+[1.091752] (turtlebot3_gazebo) StdoutLine: {'line': b'See also "/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_gazebo/CMakeFiles/CMakeOutput.log".\n'}
+[1.094495] (turtlebot3_gazebo) CommandEnded: {'returncode': 1}
+[1.101550] (-) TimerEvent: {}
+[1.109534] (turtlebot3_gazebo) JobEnded: {'identifier': 'turtlebot3_gazebo', 'rc': 1}
+[1.120251] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[1.131236] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)\n'}
+[1.201655] (-) TimerEvent: {}
+[1.210235] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  \n'}
+[1.241923] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found FastRTPS: /opt/ros/foxy/include  \n'}
+[1.301777] (-) TimerEvent: {}
+[1.326207] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[1.401896] (-) TimerEvent: {}
+[1.414755] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)\n'}
+[1.480622] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)\n'}
+[1.502006] (-) TimerEvent: {}
+[1.537302] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)\n'}
+[1.539860] (turtlebot3_fake_node) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_fastrtps_cpp' as default\n"}
+[1.542397] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread.h\n'}
+[1.602123] (-) TimerEvent: {}
+[1.607113] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread.h - found\n'}
+[1.607388] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD\n'}
+[1.666576] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed\n'}
+[1.666805] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads\n'}
+[1.702238] (-) TimerEvent: {}
+[1.712993] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthreads - not found\n'}
+[1.713167] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread\n'}
+[1.765575] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Looking for pthread_create in pthread - found\n'}
+[1.766455] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.802350] (-) TimerEvent: {}
+[1.902603] (-) TimerEvent: {}
+[1.921690] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)\n'}
+[1.988077] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)\n'}
+[2.000624] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found tf2_msgs: 0.13.13 (/opt/ros/foxy/share/tf2_msgs/cmake)\n'}
+[2.002696] (-) TimerEvent: {}
+[2.102922] (-) TimerEvent: {}
+[2.171834] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Found turtlebot3_msgs: 2.2.1 (/opt/ros/foxy/share/turtlebot3_msgs/cmake)\n'}
+[2.203010] (-) TimerEvent: {}
+[2.300146] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Configuring done\n'}
+[2.303081] (-) TimerEvent: {}
+[2.310443] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Generating done\n'}
+[2.311639] (turtlebot3_fake_node) StdoutLine: {'line': b'-- Build files have been written to: /home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node\n'}
+[2.317664] (turtlebot3_fake_node) JobEnded: {'identifier': 'turtlebot3_fake_node', 'rc': 'SIGINT'}
+[2.328114] (turtlebot3_simulations) JobSkipped: {'identifier': 'turtlebot3_simulations'}
+[2.328187] (-) EventReactorShutdown: {}

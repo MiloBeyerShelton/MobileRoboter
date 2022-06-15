@@ -1,0 +1,5 @@
+[0.028s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake --build /home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node -- -j12 -l12
+[0.363s] [35m[1mScanning dependencies of target turtlebot3_fake_node[0m
+[0.364s] [ 50%] [32mBuilding CXX object CMakeFiles/turtlebot3_fake_node.dir/src/turtlebot3_fake_node.cpp.o[0m
+[4.996s] [100%] [32m[1mLinking CXX executable turtlebot3_fake_node[0m
+[5.288s] [100%] Built target turtlebot3_fake_node

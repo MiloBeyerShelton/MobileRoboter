@@ -1,0 +1,23 @@
+running develop
+running egg_info
+creating potentialfield.egg-info
+writing potentialfield.egg-info/PKG-INFO
+writing dependency_links to potentialfield.egg-info/dependency_links.txt
+writing entry points to potentialfield.egg-info/entry_points.txt
+writing requirements to potentialfield.egg-info/requires.txt
+writing top-level names to potentialfield.egg-info/top_level.txt
+writing manifest file 'potentialfield.egg-info/SOURCES.txt'
+reading manifest file 'potentialfield.egg-info/SOURCES.txt'
+writing manifest file 'potentialfield.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/site.py
+Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield.egg-link (link to .)
+Installing potentialfield script to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/potentialfield
+
+Installed /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield
+running install_data
+creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index
+creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index
+creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index/packages
+copying resource/potentialfield -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index/packages
+copying package.xml -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/potentialfield

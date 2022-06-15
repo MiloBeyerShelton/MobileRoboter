@@ -1,0 +1,35 @@
+[0.638s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/corridor': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/corridor/build --no-deps install_data --install-dir /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor
+[0.827s] running develop
+[0.947s] running egg_info
+[0.947s] creating corridor.egg-info
+[0.947s] writing corridor.egg-info/PKG-INFO
+[0.947s] writing dependency_links to corridor.egg-info/dependency_links.txt
+[0.948s] writing entry points to corridor.egg-info/entry_points.txt
+[0.948s] writing requirements to corridor.egg-info/requires.txt
+[0.948s] writing top-level names to corridor.egg-info/top_level.txt
+[0.949s] writing manifest file 'corridor.egg-info/SOURCES.txt'
+[0.973s] reading manifest file 'corridor.egg-info/SOURCES.txt'
+[0.973s] writing manifest file 'corridor.egg-info/SOURCES.txt'
+[1.001s] running build_ext
+[1.001s] Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/python3.8/site-packages/site.py
+[1.003s] Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/python3.8/site-packages/corridor.egg-link (link to .)
+[1.003s] Installing TestNode script to /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/corridor
+[1.003s] Installing add_bot_node script to /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/corridor
+[1.004s] 
+[1.004s] Installed /home/milo/Desktop/MobileRoboter/Uebung4/build/corridor
+[1.004s] running install_data
+[1.004s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index
+[1.004s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index/resource_index
+[1.004s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index/resource_index/packages
+[1.004s] copying resource/corridor -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/ament_index/resource_index/packages
+[1.004s] copying package.xml -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor
+[1.005s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/launch
+[1.005s] copying launch/start_gazebo_corridor.launch.py -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/launch
+[1.005s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/worlds
+[1.005s] copying worlds/iti_gang_world.world -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/worlds
+[1.005s] copying worlds/iti_gang.world -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/worlds
+[1.005s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models
+[1.005s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models/itiGang
+[1.005s] copying models/itiGang/model.sdf -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models/itiGang
+[1.005s] copying models/itiGang/model.config -> /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/share/corridor/models/itiGang
+[1.042s] Invoked command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/corridor' returned '0': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/corridor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/corridor/build --no-deps install_data --install-dir /home/milo/Desktop/MobileRoboter/Uebung4/install/corridor

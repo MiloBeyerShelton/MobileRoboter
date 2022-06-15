@@ -1,0 +1,3 @@
+[console_scripts]
+potentialfield = potentialfield.potentialfield_member_function:main
+

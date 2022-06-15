@@ -1,0 +1,35 @@
+[0.467s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --uninstall --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build
+[0.637s] running develop
+[0.733s] Removing /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield.egg-link (link to .)
+[0.748s] Invoked command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield' returned '0': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --uninstall --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build
+[0.750s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/src/potentialfield': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/potentialfield build --build-base /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build install --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --record /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/install.log --single-version-externally-managed
+[0.907s] running egg_info
+[0.908s] writing ../../build/potentialfield/potentialfield.egg-info/PKG-INFO
+[0.908s] writing dependency_links to ../../build/potentialfield/potentialfield.egg-info/dependency_links.txt
+[0.908s] writing entry points to ../../build/potentialfield/potentialfield.egg-info/entry_points.txt
+[0.908s] writing requirements to ../../build/potentialfield/potentialfield.egg-info/requires.txt
+[0.908s] writing top-level names to ../../build/potentialfield/potentialfield.egg-info/top_level.txt
+[0.934s] reading manifest file '../../build/potentialfield/potentialfield.egg-info/SOURCES.txt'
+[0.934s] writing manifest file '../../build/potentialfield/potentialfield.egg-info/SOURCES.txt'
+[0.935s] running build
+[0.935s] running build_py
+[0.935s] creating /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build
+[0.935s] creating /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib
+[0.935s] creating /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield
+[0.935s] copying potentialfield/__init__.py -> /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield
+[0.935s] copying potentialfield/potentialfield_member_function.py -> /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield
+[0.935s] running install
+[0.935s] running install_lib
+[0.936s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield
+[0.936s] copying /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield/__init__.py -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield
+[0.936s] copying /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build/lib/potentialfield/potentialfield_member_function.py -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield
+[0.937s] byte-compiling /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield/__init__.py to __init__.cpython-38.pyc
+[0.937s] byte-compiling /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield/potentialfield_member_function.py to potentialfield_member_function.cpython-38.pyc
+[0.938s] running install_data
+[0.938s] Sorry: IndentationError: expected an indented block (potentialfield_member_function.py, line 30)
+[0.938s] running install_egg_info
+[0.939s] Copying ../../build/potentialfield/potentialfield.egg-info to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield-0.0.0-py3.8.egg-info
+[0.940s] running install_scripts
+[0.952s] Installing potentialfield script to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/potentialfield
+[0.952s] writing list of installed files to '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/install.log'
+[0.967s] Invoked command in '/home/milo/Desktop/MobileRoboter/Uebung4/src/potentialfield' returned '0': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py egg_info --egg-base ../../build/potentialfield build --build-base /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build install --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --record /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/install.log --single-version-externally-managed

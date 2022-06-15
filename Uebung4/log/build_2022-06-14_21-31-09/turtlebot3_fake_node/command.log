@@ -1,0 +1,1 @@
+Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/milo/Desktop/MobileRoboter/Uebung4/src/turtlebot3_simulations/turtlebot3_fake_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/milo/Desktop/MobileRoboter/Uebung4/install/turtlebot3_fake_node

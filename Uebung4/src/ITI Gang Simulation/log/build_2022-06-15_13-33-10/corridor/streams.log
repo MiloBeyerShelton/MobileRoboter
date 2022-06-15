@@ -1,0 +1,18 @@
+[0.469s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/build/corridor': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/build/corridor/build --no-deps install_data --install-dir /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor
+[0.648s] running develop
+[0.751s] running egg_info
+[0.751s] writing corridor.egg-info/PKG-INFO
+[0.751s] writing dependency_links to corridor.egg-info/dependency_links.txt
+[0.751s] writing entry points to corridor.egg-info/entry_points.txt
+[0.751s] writing requirements to corridor.egg-info/requires.txt
+[0.751s] writing top-level names to corridor.egg-info/top_level.txt
+[0.775s] reading manifest file 'corridor.egg-info/SOURCES.txt'
+[0.776s] writing manifest file 'corridor.egg-info/SOURCES.txt'
+[0.802s] running build_ext
+[0.802s] Creating /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor/lib/python3.8/site-packages/corridor.egg-link (link to .)
+[0.803s] Installing TestNode script to /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor/lib/corridor
+[0.803s] Installing add_bot_node script to /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor/lib/corridor
+[0.803s] 
+[0.803s] Installed /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/build/corridor
+[0.803s] running install_data
+[0.820s] Invoked command in '/home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/build/corridor' returned '0': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/build/corridor/build --no-deps install_data --install-dir /home/milo/Desktop/MobileRoboter/Uebung4/src/ITI Gang Simulation/install/corridor

@@ -1,0 +1,45 @@
+[0.027s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node': CMAKE_PREFIX_PATH=/opt/ros/foxy /usr/bin/cmake /home/milo/Desktop/MobileRoboter/Uebung4/src/turtlebot3_simulations/turtlebot3_fake_node -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/milo/Desktop/MobileRoboter/Uebung4/install/turtlebot3_fake_node
+[0.363s] -- The C compiler identification is GNU 9.4.0
+[0.571s] -- The CXX compiler identification is GNU 9.4.0
+[0.581s] -- Check for working C compiler: /usr/bin/cc
+[0.643s] -- Check for working C compiler: /usr/bin/cc -- works
+[0.645s] -- Detecting C compiler ABI info
+[0.703s] -- Detecting C compiler ABI info - done
+[0.720s] -- Detecting C compile features
+[0.721s] -- Detecting C compile features - done
+[0.725s] -- Check for working CXX compiler: /usr/bin/c++
+[0.789s] -- Check for working CXX compiler: /usr/bin/c++ -- works
+[0.790s] -- Detecting CXX compiler ABI info
+[0.856s] -- Detecting CXX compiler ABI info - done
+[0.873s] -- Detecting CXX compile features
+[0.874s] -- Detecting CXX compile features - done
+[0.876s] -- Found ament_cmake: 0.9.9 (/opt/ros/foxy/share/ament_cmake/cmake)
+[0.897s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3") 
+[0.897s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[1.042s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.079s] -- Found geometry_msgs: 2.0.5 (/opt/ros/foxy/share/geometry_msgs/cmake)
+[1.119s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[1.130s] -- Found rosidl_adapter: 1.2.1 (/opt/ros/foxy/share/rosidl_adapter/cmake)
+[1.209s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "1.1.1f")  
+[1.241s] -- Found FastRTPS: /opt/ros/foxy/include  
+[1.325s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[1.414s] -- Found nav_msgs: 2.0.5 (/opt/ros/foxy/share/nav_msgs/cmake)
+[1.480s] -- Found rclcpp: 2.4.1 (/opt/ros/foxy/share/rclcpp/cmake)
+[1.537s] -- Found rmw_implementation_cmake: 1.0.3 (/opt/ros/foxy/share/rmw_implementation_cmake/cmake)
+[1.539s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[1.542s] -- Looking for pthread.h
+[1.606s] -- Looking for pthread.h - found
+[1.607s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[1.666s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Failed
+[1.666s] -- Looking for pthread_create in pthreads
+[1.712s] -- Looking for pthread_create in pthreads - not found
+[1.712s] -- Looking for pthread_create in pthread
+[1.765s] -- Looking for pthread_create in pthread - found
+[1.766s] -- Found Threads: TRUE  
+[1.921s] -- Found sensor_msgs: 2.0.5 (/opt/ros/foxy/share/sensor_msgs/cmake)
+[1.987s] -- Found tf2: 0.13.13 (/opt/ros/foxy/share/tf2/cmake)
+[2.000s] -- Found tf2_msgs: 0.13.13 (/opt/ros/foxy/share/tf2_msgs/cmake)
+[2.171s] -- Found turtlebot3_msgs: 2.2.1 (/opt/ros/foxy/share/turtlebot3_msgs/cmake)
+[2.299s] -- Configuring done
+[2.310s] -- Generating done
+[2.311s] -- Build files have been written to: /home/milo/Desktop/MobileRoboter/Uebung4/build/turtlebot3_fake_node

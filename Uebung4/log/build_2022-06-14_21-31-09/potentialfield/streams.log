@@ -1,0 +1,25 @@
+[0.641s] Invoking command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build --no-deps install_data --install-dir /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield
+[0.810s] running develop
+[0.918s] running egg_info
+[0.918s] creating potentialfield.egg-info
+[0.918s] writing potentialfield.egg-info/PKG-INFO
+[0.918s] writing dependency_links to potentialfield.egg-info/dependency_links.txt
+[0.918s] writing entry points to potentialfield.egg-info/entry_points.txt
+[0.918s] writing requirements to potentialfield.egg-info/requires.txt
+[0.918s] writing top-level names to potentialfield.egg-info/top_level.txt
+[0.920s] writing manifest file 'potentialfield.egg-info/SOURCES.txt'
+[0.952s] reading manifest file 'potentialfield.egg-info/SOURCES.txt'
+[0.952s] writing manifest file 'potentialfield.egg-info/SOURCES.txt'
+[0.983s] running build_ext
+[0.983s] Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/site.py
+[0.984s] Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield.egg-link (link to .)
+[0.985s] Installing potentialfield script to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/potentialfield
+[0.985s] 
+[0.985s] Installed /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield
+[0.985s] running install_data
+[0.986s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index
+[0.986s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index
+[0.986s] creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index/packages
+[0.986s] copying resource/potentialfield -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/ament_index/resource_index/packages
+[0.986s] copying package.xml -> /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/share/potentialfield
+[1.022s] Invoked command in '/home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield' returned '0': PYTHONPATH=/home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --prefix /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield --editable --build-directory /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield/build --no-deps install_data --install-dir /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield

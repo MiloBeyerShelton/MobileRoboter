@@ -1,0 +1,15 @@
+running develop
+running egg_info
+writing potentialfield.egg-info/PKG-INFO
+writing dependency_links to potentialfield.egg-info/dependency_links.txt
+writing entry points to potentialfield.egg-info/entry_points.txt
+writing requirements to potentialfield.egg-info/requires.txt
+writing top-level names to potentialfield.egg-info/top_level.txt
+reading manifest file 'potentialfield.egg-info/SOURCES.txt'
+writing manifest file 'potentialfield.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/python3.8/site-packages/potentialfield.egg-link (link to .)
+Installing potentialfield script to /home/milo/Desktop/MobileRoboter/Uebung4/install/potentialfield/lib/potentialfield
+
+Installed /home/milo/Desktop/MobileRoboter/Uebung4/build/potentialfield
+running install_data
