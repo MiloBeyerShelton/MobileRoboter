@@ -32,32 +32,60 @@ class PotentialField(Node):
         x = 0
         y = 0
         for idx, i in enumerate(msg.ranges):
-            if i != float("inf") and i < 0.2:
+            if i != float("inf") and i < 1.0:
                 #print("idx: {} i: {} x: {} y: {}".format(idx, i, -math.cos(idx), -math.sin(idx)))
                 x += -math.cos(math.radians(idx)) *(1/i)
                 y += -math.sin(math.radians(idx)) *(1/i)
-            if i == float("inf") and (idx in range(0,90) or idx in range(270, 360)):
-                x += math.cos(math.radians(idx))*2
-                y += math.sin(math.radians(idx))*2
-                
 
-        angularZ = math.acos(math.radians(((x*1)+(y*0))/(math.sqrt(x**2+y**2)*(1))))*(math.pi/180)*1.3
-        if angularZ > 1.82:
-            if y < 0:
-                self.z_angular_vel = -1.82
-            else:
-                self.z_angular_vel = 1.82
+        x += 250
+        y += 0
+        vec_len = math.sqrt(x**2+y**2)
+
+        #print("x: {} y: {}".format(x, y))
+        if vec_len != 0:
+            x = x / vec_len     
+            y = y / vec_len
+        
+        #print("x: {} y: {}".format(x, y))
+
+        angularZ = math.acos(((x*1)+(y*0))/(math.sqrt(x**2+y**2)))
+        print(math.degrees(angularZ))
+        if angularZ > math.radians(40):
+            xVel = 0.0
+            if y > 0:
+                self.z_angular_vel = 0.3
+            
+            else: 
+                self.z_angular_vel = -0.3
+               
+        elif angularZ > math.radians(25):
+            if y > 0:
+                self.z_angular_vel = 0.3
+                xVel = msg.ranges[0]*0.07
+            else: 
+                self.z_angular_vel = -0.3
+                xVel = msg.ranges[0]*0.07
+        elif angularZ > math.radians(15):
+            if y > 0:
+                self.z_angular_vel = 0.1
+                xVel = msg.ranges[0]*0.07
+            else: 
+                self.z_angular_vel = -0.1
+                xVel = msg.ranges[0]*0.07
         else:
-            if y < 0:
-                self.z_angular_vel = -angularZ
-            else:
-                self.z_angular_vel = angularZ
+            #xVel = msg.ranges[0]*0.087-0.0435
+            xVel = msg.ranges[0]*0.07
 
-        xVel = math.sqrt(x**2+y**2)/100
-        if xVel > 0.26:
+            self.z_angular_vel =0.0
+        if xVel > 0.26: 
             self.x_vel = 0.26
         else:
             self.x_vel = xVel
+
+       
+                
+        
+      
 
         print("direction x: {} y: {} x_Vel: {} angZ: {}".format(x,y, self.x_vel, self.z_angular_vel))
         #self.x_vel = 0.0
@@ -70,7 +98,7 @@ class PotentialField(Node):
     
     def destroy_node(self):
         # stop robot on shutdown 
-        self.command_publisher.publish(Twist()) 
+        self.publisher_.publish(Twist()) 
         super().destroy_node()
 
 def main(args=None): 

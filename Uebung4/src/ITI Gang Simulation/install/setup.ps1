@@ -23,7 +23,6 @@ function _colcon_prefix_chain_powershell_source_script {
 
 # source chained prefixes
 _colcon_prefix_chain_powershell_source_script "/opt/ros/foxy\local_setup.ps1"
-_colcon_prefix_chain_powershell_source_script "/home/milo/dev_ws/install\local_setup.ps1"
 _colcon_prefix_chain_powershell_source_script "/home/milo/Desktop/MobileRoboter/Uebung4/install\local_setup.ps1"
 
 # source this prefix
