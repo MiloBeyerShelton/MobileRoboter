@@ -31,7 +31,7 @@ class PotentialField(Node):
     def callback(self,msg): 
         x = 0
         y = 0
-        d = 1.0
+        d = 0.5
         count = 1
         for idx, i in enumerate(msg.ranges):
             if i != float("inf") and 0 < i < d:
@@ -48,13 +48,15 @@ class PotentialField(Node):
         y = y / count
         
         vec_len = math.sqrt(x**2+y**2)
+        angularZ = math.degrees(math.acos(((x*1)+(y*0))/(math.sqrt(x**2+y**2))))*0.01011
         if y > 0:
-            angularZ = math.degrees(math.acos(((x*1)+(y*0))/(math.sqrt(x**2+y**2))))*0.01011
+            angularZ = angularZ
         else:
-            angularZ = -math.degrees(math.acos(((x*1)+(y*0))/(math.sqrt(x**2+y**2))))*0.01011
+            angularZ = -angularZ
         
         
         self.x_vel = vec_len *0.07 # set motor speed
+        self.z_angular_vel = angularZ
         print("Angle: ".format(math.degrees(angularZ)))
 
         print("direction x: {} y: {} x_Vel: {} angZ: {}".format(x,y, self.x_vel, self.z_angular_vel))
