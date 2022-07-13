@@ -48,56 +48,16 @@ class PotentialField(Node):
         y = y / count
         
         vec_len = math.sqrt(x**2+y**2)
-        angularZ = math.acos(((x*1)+(y*0))/(math.sqrt(x**2+y**2)))
-        
-        print(math.degrees(angularZ))
-        self.x_vel = vec_len # set motor speed
-
-        # ab hier muss noch viel
-        
-        if angularZ > math.radians(40):
-            xVel = 0.0
-            if y > 0:
-                self.z_angular_vel = 0.3
-            
-            else: 
-                self.z_angular_vel = -0.3
-               
-        elif angularZ > math.radians(25):
-            if y > 0:
-                self.z_angular_vel = 0.3
-                xVel = msg.ranges[0]*0.07
-            else: 
-                self.z_angular_vel = -0.3
-                xVel = msg.ranges[0]*0.07
-        elif angularZ > math.radians(15):
-            if y > 0:
-                self.z_angular_vel = 0.1
-                xVel = msg.ranges[0]*0.07
-            else: 
-                self.z_angular_vel = -0.1
-                xVel = msg.ranges[0]*0.07
+        if y > 0:
+            angularZ = math.degrees(math.acos(((x*1)+(y*0))/(math.sqrt(x**2+y**2))))*0.01011
         else:
-            #xVel = msg.ranges[0]*0.087-0.0435
-            xVel = msg.ranges[0]*0.07
-
-            self.z_angular_vel =0.0
-        if xVel > 0.26: 
-            self.x_vel = 0.26
-        else:
-            self.x_vel = xVel
-
-       
-                
+            angularZ = -math.degrees(math.acos(((x*1)+(y*0))/(math.sqrt(x**2+y**2))))*0.01011
         
-      
+        
+        self.x_vel = vec_len *0.07 # set motor speed
+        print("Angle: ".format(math.degrees(angularZ)))
 
         print("direction x: {} y: {} x_Vel: {} angZ: {}".format(x,y, self.x_vel, self.z_angular_vel))
-        #self.x_vel = 0.0
-        #self.z_angular_vel = 0.0
-        # TODO: implement repulsive and attractice potential field  
-        #self.get_logger().info("I sensor: {} avr:".format( msg.ranges[90] ))
-        
         
         
     
